@@ -1,2 +1,50 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation Booking</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f9f9f9; }
+        form { max-width: 600px; margin: auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label { display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Book a Translation Service</h1>
+    <form action="https://formspree.io/f/meodnjgq" method="POST">  <!-- Replace with your Formspree endpoint -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Telephone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="language">Source Language:</label>
+        <select id="language" name="source_language" required>
+            <option value="">Select</option>
+            <option value="English">English</option>
+            <option value="Arabic">Arabic</option>
+        </select>
+        
+        <label for="target">Target Language:</label>
+        <select id="target" name="target_language" required>
+            <option value="">Select</option>
+            <option value="English">English</option>
+            <option value="Arabic">Arabic</option>
+        </select>
+        
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" name="deadline" required>
+        
+        <button type="submit">Submit Booking</button>
+        
+    </form>
+</body>
+</html>
